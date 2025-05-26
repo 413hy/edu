@@ -248,7 +248,7 @@
         }
         
         .program__title {
-            font-size: var(--fs-xl);
+            font-size: var(--fs-lg);
             margin-bottom: 0.5rem;
         }
         
@@ -347,6 +347,107 @@
                 text-align: center;
             }
         }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: var(--color-light);
+        }
+
+        .contact__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact__info {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--b-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .contact__title {
+            font-size: var(--fs-lg);
+            color: var(--color-title);
+            margin-bottom: 1rem;
+        }
+
+        .contact__item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact__icon {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        /* Research Section */
+        .research {
+            padding: 5rem 0;
+        }
+
+        .research__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .research__card {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--b-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .research__title {
+            font-size: var(--fs-lg);
+            color: var(--color-title);
+            margin-bottom: 1rem;
+        }
+
+        /* Campus Section */
+        .campus {
+            padding: 5rem 0;
+            background: var(--color-light);
+        }
+
+        .campus__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .campus__card {
+            position: relative;
+            border-radius: var(--b-radius);
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .campus__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .campus__content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: var(--color-white);
+        }
+
+        .campus__title {
+            font-size: var(--fs-lg);
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 
@@ -356,143 +457,174 @@
         <nav class="nav container">
             <a href="#" class="nav__brand">青北学院</a>
             <ul class="nav__list">
-                <li><a href="#about" class="nav__link">关于我们</a></li>
-                <li><a href="#programs" class="nav__link">专业设置</a></li>
-                <li><a href="#admission" class="nav__link">招生信息</a></li>
+                <li><a href="#home" class="nav__link">首页</a></li>
+                <li><a href="#programs" class="nav__link">专业课程</a></li>
+                <li><a href="#research" class="nav__link">研究项目</a></li>
                 <li><a href="#campus" class="nav__link">校园生活</a></li>
-                <li><a href="#research" class="nav__link">科研成果</a></li>
                 <li><a href="#contact" class="nav__link">联系我们</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__content">
-                <h1 class="hero__title">培养未来的领导者</h1>
-                <p class="hero__description">青北大学致力于为学生提供世界一流的教育，培养具有全球视野和创新精神的未来领袖。</p>
-                <div class="hero__buttons">
-                    <a href="#admission" class="btn btn--primary">立即申请</a>
-                    <a href="#programs" class="btn btn--secondary">了解专业</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="about">
-        <div class="container">
-            <h2 class="section__title">为什么选择青北学院</h2>
-            <div class="features__grid">
-                <div class="feature__card">
-                    <i class="ri-global-line feature__icon"></i>
-                    <h3 class="feature__title">国际化教育</h3>
-                    <p class="feature__description">与世界顶尖大学建立合作关系，提供丰富的国际交流机会。</p>
-                </div>
-                <div class="feature__card">
-                    <i class="ri-team-line feature__icon"></i>
-                    <h3 class="feature__title">优秀师资</h3>
-                    <p class="feature__description">汇聚海内外知名学者，为学生提供最优质的教育资源。</p>
-                </div>
-                <div class="feature__card">
-                    <i class="ri-lightbulb-line feature__icon"></i>
-                    <h3 class="feature__title">创新研究</h3>
-                    <p class="feature__description">注重科研创新，为学生提供参与前沿研究的机会。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section class="programs" id="programs">
-        <div class="container">
-            <h2 class="section__title">特色专业</h2>
-            <div class="programs__grid">
-                <div class="program__card">
-                    <img src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="人工智能" class="program__image">
-                    <div class="program__content">
-                        <h3 class="program__title">人工智能与数据科学</h3>
-                        <p class="program__description">培养未来AI领域的领军人才</p>
-                    </div>
-                </div>
-                <div class="program__card">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="生物科技" class="program__image">
-                    <div class="program__content">
-                        <h3 class="program__title">生物科技与医学</h3>
-                        <p class="program__description">探索生命科学的奥秘</p>
-                    </div>
-                </div>
-                <div class="program__card">
-                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="商业管理" class="program__image">
-                    <div class="program__content">
-                        <h3 class="program__title">商业管理与创新</h3>
-                        <p class="program__description">培养未来的商业领袖</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">培养未来的领导者</h1>
+                    <p class="hero__description">青北学院致力于为学生提供优质的教育资源和创新的学习环境，培养具有全球视野的未来领袖。</p>
+                    <div class="hero__buttons">
+                        <a href="#programs" class="btn btn--primary">探索课程</a>
+                        <a href="#contact" class="btn btn--secondary">联系我们</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats__grid">
-                <div class="stat">
-                    <div class="stat__number">50+</div>
-                    <div class="stat__label">本科专业</div>
-                </div>
-                <div class="stat">
-                    <div class="stat__number">100+</div>
-                    <div class="stat__label">国际合作院校</div>
-                </div>
-                <div class="stat">
-                    <div class="stat__number">95%</div>
-                    <div class="stat__label">就业率</div>
-                </div>
-                <div class="stat">
-                    <div class="stat__number">200+</div>
-                    <div class="stat__label">研究实验室</div>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section__title">我们的优势</h2>
+                <div class="features__grid">
+                    <div class="feature__card">
+                        <i class="ri-book-open-line feature__icon"></i>
+                        <h3 class="feature__title">优质教育资源</h3>
+                        <p class="feature__description">提供世界一流的教育资源和先进的教学设施。</p>
+                    </div>
+                    <div class="feature__card">
+                        <i class="ri-team-line feature__icon"></i>
+                        <h3 class="feature__title">优秀师资力量</h3>
+                        <p class="feature__description">汇聚海内外优秀教师，提供专业的教学指导。</p>
+                    </div>
+                    <div class="feature__card">
+                        <i class="ri-global-line feature__icon"></i>
+                        <h3 class="feature__title">国际化视野</h3>
+                        <p class="feature__description">开展国际交流项目，培养全球化人才。</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- Programs Section -->
+        <section class="programs" id="programs">
+            <div class="container">
+                <h2 class="section__title">专业课程</h2>
+                <div class="programs__grid">
+                    <div class="program__card">
+                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8" alt="计算机科学" class="program__image">
+                        <div class="program__content">
+                            <h3 class="program__title">计算机科学</h3>
+                            <p>培养具有创新思维和技术能力的计算机专业人才</p>
+                        </div>
+                    </div>
+                    <div class="program__card">
+                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557" alt="艺术设计" class="program__image">
+                        <div class="program__content">
+                            <h3 class="program__title">艺术设计</h3>
+                            <p>培养具有创造力和艺术修养的设计人才</p>
+                        </div>
+                    </div>
+                    <div class="program__card">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef" alt="商业管理" class="program__image">
+                        <div class="program__content">
+                            <h3 class="program__title">商业管理</h3>
+                            <p>培养具有战略思维和领导力的商业精英</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section class="research" id="research">
+            <div class="container">
+                <h2 class="section__title">研究项目</h2>
+                <div class="research__grid">
+                    <div class="research__card">
+                        <h3 class="research__title">人工智能研究</h3>
+                        <p>探索人工智能前沿技术，推动科技创新发展</p>
+                    </div>
+                    <div class="research__card">
+                        <h3 class="research__title">可持续发展</h3>
+                        <p>研究环境保护和可持续发展解决方案</p>
+                    </div>
+                    <div class="research__card">
+                        <h3 class="research__title">社会科学</h3>
+                        <p>深入探讨社会问题，提供政策建议</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campus Section -->
+        <section class="campus" id="campus">
+            <div class="container">
+                <h2 class="section__title">校园生活</h2>
+                <div class="campus__grid">
+                    <div class="campus__card">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f" alt="校园环境" class="campus__image">
+                        <div class="campus__content">
+                            <h3 class="campus__title">优美校园环境</h3>
+                            <p>现代化的教学设施和舒适的学习空间</p>
+                        </div>
+                    </div>
+                    <div class="campus__card">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1" alt="学生活动" class="campus__image">
+                        <div class="campus__content">
+                            <h3 class="campus__title">丰富校园活动</h3>
+                            <p>多样化的社团活动和校园文化</p>
+                        </div>
+                    </div>
+                    <div class="campus__card">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" alt="学生宿舍" class="campus__image">
+                        <div class="campus__content">
+                            <h3 class="campus__title">舒适住宿环境</h3>
+                            <p>安全、舒适的现代化学生宿舍</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section__title">联系我们</h2>
+                <div class="contact__grid">
+                    <div class="contact__info">
+                        <h3 class="contact__title">联系方式</h3>
+                        <div class="contact__item">
+                            <i class="ri-map-pin-line contact__icon"></i>
+                            <p>地址：北京市海淀区青北路1号</p>
+                        </div>
+                        <div class="contact__item">
+                            <i class="ri-phone-line contact__icon"></i>
+                            <p>电话：010-12345678</p>
+                        </div>
+                        <div class="contact__item">
+                            <i class="ri-mail-line contact__icon"></i>
+                            <p>邮箱：info@qingbei.edu.cn</p>
+                        </div>
+                    </div>
+                    <div class="contact__info">
+                        <h3 class="contact__title">招生咨询</h3>
+                        <div class="contact__item">
+                            <i class="ri-customer-service-line contact__icon"></i>
+                            <p>招生热线：010-87654321</p>
+                        </div>
+                        <div class="contact__item">
+                            <i class="ri-time-line contact__icon"></i>
+                            <p>工作时间：周一至周五 9:00-17:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
-            <div class="footer__grid">
-                <div class="footer__content">
-                    <h3 class="footer__title">关于我们</h3>
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">学校简介</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">发展历程</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">校园文化</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">新闻中心</a></li>
-                    </ul>
-                </div>
-                <div class="footer__content">
-                    <h3 class="footer__title">招生信息</h3>
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">本科招生</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">研究生招生</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">国际学生</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">奖学金</a></li>
-                    </ul>
-                </div>
-                <div class="footer__content">
-                    <h3 class="footer__title">联系我们</h3>
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">联系方式</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">校园地图</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">交通指南</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">常见问题</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>YangHE&copy; 2024 青北学院 版权所有</p>
-            </div>
+            <p>&copy; 2024 青北学院. All rights reserved.</p>
         </div>
     </footer>
 </body>
