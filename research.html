@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科研成果 - 青北学院</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .research-section {
+            padding: 4rem 0;
+        }
+        
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .research-card {
+            padding: 2rem;
+        }
+        
+        .research-card__icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .research-card__title {
+            font-size: var(--fs-xl);
+            color: var(--color-title);
+            margin-bottom: 1rem;
+        }
+        
+        .research-card__description {
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .research-card__stats {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .research-card__stat {
+            text-align: center;
+        }
+        
+        .research-card__number {
+            font-size: 2rem;
+            font-weight: var(--fw-bold);
+            color: var(--color-primary);
+        }
+        
+        .research-card__label {
+            font-size: var(--fs-sm);
+            color: var(--color-gray);
+        }
+        
+        .publications {
+            margin-top: 5rem;
+        }
+        
+        .publication-list {
+            list-style: none;
+        }
+        
+        .publication-item {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--color-light);
+            transition: var(--transition);
+        }
+        
+        .publication-item:hover {
+            background: var(--color-light);
+        }
+        
+        .publication-title {
+            font-size: var(--fs-lg);
+            color: var(--color-title);
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-authors {
+            color: var(--color-gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-journal {
+            font-size: var(--fs-sm);
+            color: var(--color-primary);
+        }
+        
+        .labs {
+            margin-top: 5rem;
+        }
+        
+        .lab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .lab-card {
+            position: relative;
+            border-radius: var(--b-radius);
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+        
+        .lab-card__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .lab-card__content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: var(--color-white);
+        }
+        
+        .lab-card__title {
+            font-size: var(--fs-xl);
+            margin-bottom: 0.5rem;
+        }
+        
+        .lab-card__description {
+            opacity: 0.9;
+        }
+        
+        .lab-card:hover .lab-card__image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__brand">青北学院</a>
+            <ul class="nav__list">
+                <li><a href="index.html#about" class="nav__link">关于我们</a></li>
+                <li><a href="index.html#programs" class="nav__link">专业设置</a></li>
+                <li><a href="admission.html" class="nav__link">招生信息</a></li>
+                <li><a href="campus.html" class="nav__link">校园生活</a></li>
+                <li><a href="research.html" class="nav__link">科研成果</a></li>
+                <li><a href="contact.html" class="nav__link">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">科研成果</h1>
+            <p class="page-description">探索青北学院的科研实力、重要成果和前沿研究</p>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="research-section">
+        <div class="container">
+            <div class="research-grid">
+                <div class="card research-card">
+                    <i class="ri-microscope-line research-card__icon"></i>
+                    <h2 class="research-card__title">人工智能与机器学习</h2>
+                    <p class="research-card__description">在人工智能、机器学习和深度学习领域开展前沿研究，推动技术创新和应用落地。</p>
+                    <div class="research-card__stats">
+                        <div class="research-card__stat">
+                            <div class="research-card__number">50+</div>
+                            <div class="research-card__label">研究项目</div>
+                        </div>
+                        <div class="research-card__stat">
+                            <div class="research-card__number">100+</div>
+                            <div class="research-card__label">发表论文</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card research-card">
+                    <i class="ri-dna-line research-card__icon"></i>
+                    <h2 class="research-card__title">生物医学研究</h2>
+                    <p class="research-card__description">在基因工程、细胞治疗和生物制药等领域开展创新研究，推动医学发展。</p>
+                    <div class="research-card__stats">
+                        <div class="research-card__stat">
+                            <div class="research-card__number">30+</div>
+                            <div class="research-card__label">研究项目</div>
+                        </div>
+                        <div class="research-card__stat">
+                            <div class="research-card__number">80+</div>
+                            <div class="research-card__label">发表论文</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card research-card">
+                    <i class="ri-earth-line research-card__icon"></i>
+                    <h2 class="research-card__title">环境与可持续发展</h2>
+                    <p class="research-card__description">研究环境保护、可再生能源和可持续发展等关键问题，为全球环境治理提供解决方案。</p>
+                    <div class="research-card__stats">
+                        <div class="research-card__stat">
+                            <div class="research-card__number">40+</div>
+                            <div class="research-card__label">研究项目</div>
+                        </div>
+                        <div class="research-card__stat">
+                            <div class="research-card__number">90+</div>
+                            <div class="research-card__label">发表论文</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications Section -->
+            <div class="publications">
+                <h2 class="section__title">最新发表</h2>
+                <ul class="publication-list">
+                    <li class="publication-item">
+                        <h3 class="publication-title">基于深度学习的自然语言处理新方法</h3>
+                        <p class="publication-authors">张教授, 李研究员, 王博士</p>
+                        <p class="publication-journal">Nature Machine Intelligence, 2024</p>
+                    </li>
+                    <li class="publication-item">
+                        <h3 class="publication-title">基因编辑技术在疾病治疗中的应用</h3>
+                        <p class="publication-authors">刘教授, 陈研究员</p>
+                        <p class="publication-journal">Science, 2024</p>
+                    </li>
+                    <li class="publication-item">
+                        <h3 class="publication-title">新型太阳能电池材料研究</h3>
+                        <p class="publication-authors">王教授, 张博士, 李研究员</p>
+                        <p class="publication-journal">Advanced Materials, 2024</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Labs Section -->
+            <div class="labs">
+                <h2 class="section__title">重点实验室</h2>
+                <div class="lab-grid">
+                    <div class="lab-card">
+                        <img src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="人工智能实验室" class="lab-card__image">
+                        <div class="lab-card__content">
+                            <h3 class="lab-card__title">人工智能实验室</h3>
+                            <p class="lab-card__description">专注于人工智能基础研究和应用开发</p>
+                        </div>
+                    </div>
+                    <div class="lab-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="生物医学实验室" class="lab-card__image">
+                        <div class="lab-card__content">
+                            <h3 class="lab-card__title">生物医学实验室</h3>
+                            <p class="lab-card__description">致力于生物医学前沿技术研究</p>
+                        </div>
+                    </div>
+                    <div class="lab-card">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="环境科学实验室" class="lab-card__image">
+                        <div class="lab-card__content">
+                            <h3 class="lab-card__title">环境科学实验室</h3>
+                            <p class="lab-card__description">研究环境治理和可持续发展</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">关于我们</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">学校简介</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">发展历程</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">校园文化</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">新闻中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">招生信息</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">本科招生</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">研究生招生</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">国际学生</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">奖学金</a></li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">联系我们</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">联系方式</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">校园地图</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">交通指南</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">常见问题</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>YangHE&copy; 2024 青北学院 版权所有</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

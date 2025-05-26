@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招生信息 - 青北学院</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admission-section {
+            padding: 4rem 0;
+        }
+        
+        .admission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .admission-card {
+            padding: 2rem;
+        }
+        
+        .admission-card__icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .admission-card__title {
+            font-size: var(--fs-xl);
+            color: var(--color-title);
+            margin-bottom: 1rem;
+        }
+        
+        .admission-card__list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .admission-card__item {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .admission-card__item::before {
+            content: "•";
+            color: var(--color-primary);
+            position: absolute;
+            left: 0;
+        }
+        
+        .timeline {
+            margin-top: 3rem;
+        }
+        
+        .timeline__item {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .timeline__date {
+            font-weight: var(--fw-bold);
+            color: var(--color-primary);
+        }
+        
+        .timeline__content {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline__content::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--color-primary);
+        }
+        
+        .timeline__title {
+            font-size: var(--fs-lg);
+            color: var(--color-title);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__brand">青北学院</a>
+            <ul class="nav__list">
+                <li><a href="index.html#about" class="nav__link">关于我们</a></li>
+                <li><a href="index.html#programs" class="nav__link">专业设置</a></li>
+                <li><a href="admission.html" class="nav__link">招生信息</a></li>
+                <li><a href="campus.html" class="nav__link">校园生活</a></li>
+                <li><a href="research.html" class="nav__link">科研成果</a></li>
+                <li><a href="contact.html" class="nav__link">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">招生信息</h1>
+            <p class="page-description">了解青北学院的招生政策、申请流程和重要时间节点</p>
+        </div>
+    </section>
+
+    <!-- Admission Section -->
+    <section class="admission-section">
+        <div class="container">
+            <div class="admission-grid">
+                <div class="card admission-card">
+                    <i class="ri-graduation-cap-line admission-card__icon"></i>
+                    <h2 class="admission-card__title">本科招生</h2>
+                    <ul class="admission-card__list">
+                        <li class="admission-card__item">全国统一高考招生</li>
+                        <li class="admission-card__item">自主招生计划</li>
+                        <li class="admission-card__item">艺术特长生招生</li>
+                        <li class="admission-card__item">体育特长生招生</li>
+                    </ul>
+                    <a href="#" class="btn btn--primary">查看详情</a>
+                </div>
+                
+                <div class="card admission-card">
+                    <i class="ri-book-open-line admission-card__icon"></i>
+                    <h2 class="admission-card__title">研究生招生</h2>
+                    <ul class="admission-card__list">
+                        <li class="admission-card__item">硕士研究生招生</li>
+                        <li class="admission-card__item">博士研究生招生</li>
+                        <li class="admission-card__item">推免生计划</li>
+                        <li class="admission-card__item">在职研究生项目</li>
+                    </ul>
+                    <a href="#" class="btn btn--primary">查看详情</a>
+                </div>
+                
+                <div class="card admission-card">
+                    <i class="ri-global-line admission-card__icon"></i>
+                    <h2 class="admission-card__title">国际学生</h2>
+                    <ul class="admission-card__list">
+                        <li class="admission-card__item">本科国际生项目</li>
+                        <li class="admission-card__item">研究生国际项目</li>
+                        <li class="admission-card__item">交换生项目</li>
+                        <li class="admission-card__item">短期访学项目</li>
+                    </ul>
+                    <a href="#" class="btn btn--primary">查看详情</a>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <h2 class="section__title">重要时间节点</h2>
+                <div class="timeline__item">
+                    <div class="timeline__date">2024年3月</div>
+                    <div class="timeline__content">
+                        <h3 class="timeline__title">自主招生报名开始</h3>
+                        <p>开始接受自主招生申请，包括艺术特长生和体育特长生</p>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__date">2024年4月</div>
+                    <div class="timeline__content">
+                        <h3 class="timeline__title">研究生复试</h3>
+                        <p>硕士研究生复试及博士研究生考核</p>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__date">2024年6月</div>
+                    <div class="timeline__content">
+                        <h3 class="timeline__title">高考招生</h3>
+                        <p>全国统一高考招生工作开始</p>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__date">2024年7月</div>
+                    <div class="timeline__content">
+                        <h3 class="timeline__title">国际学生申请</h3>
+                        <p>秋季学期国际学生申请截止</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">关于我们</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">学校简介</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">发展历程</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">校园文化</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">新闻中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">招生信息</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">本科招生</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">研究生招生</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">国际学生</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">奖学金</a></li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">联系我们</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">联系方式</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">校园地图</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">交通指南</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">常见问题</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>YangHE&copy; 2024 青北学院 版权所有</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
